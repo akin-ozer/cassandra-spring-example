@@ -1,11 +1,11 @@
-#cassandra spring implementation
+# cassandra spring implementation
 
 This project inspired from: https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-data-cassandra
 
 
 Difference is, that project is not working properly on docker image of cassandra.
 
-###use following commands
+### use following commands
 
         docker pull cassandra
         
@@ -24,7 +24,7 @@ Difference is, that project is not working properly on docker image of cassandra
   
     
 
-###configure cassandra
+### configure cassandra
 
         CREATE KEYSPACE mykeyspace WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
@@ -36,7 +36,7 @@ Difference is, that project is not working properly on docker image of cassandra
         
 **this creates table and indexes to use our repository properly(table name is relevant, must be same with domain class name)**
 
-##run the project
+## run the project
 
 Simply run the project after database configurations, it just takes your input, saves into db and shows back to you.
 
