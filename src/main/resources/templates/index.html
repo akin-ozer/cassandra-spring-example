@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Demo App</title>
+</head>
+<body>
+<table>
+    <tr th:each="customers : ${customer}">
+
+        <td th:text="${customers.id}"></td>
+        <td th:text="${customers.firstName}"></td>
+        <td th:text="${customers.lastName}"></td>
+    </tr>
+
+</table>
+<form action="#" th:action="@{/}" th:object="${customerImpl}" method="post">
+    <input type="text" th:field="*{firstName}" />
+    <input type="text" th:field="*{lastName}" />
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
