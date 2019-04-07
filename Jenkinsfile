@@ -6,5 +6,10 @@ pipeline {
         sh 'mvn clean install -DskipTests'
       }
     }
+    stage('kube') {
+      steps {
+        sh 'kubectl create --help'
+      }
+    }
   }
 }
