@@ -1,12 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3-alpine'
-      args '''-v /root/.m2:/root/.m2
--it --entrypoint=/bin/bash'''
-    }
-
-  }
+  agent any
   stages {
     stage('error') {
       steps {
