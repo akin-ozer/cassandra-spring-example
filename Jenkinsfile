@@ -10,6 +10,7 @@ pipeline {
     stage('print') {
       steps {
         echo 'haha'
+        sh 'mvn -v'
       }
     }
   }
